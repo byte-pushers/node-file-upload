@@ -1,8 +1,8 @@
 <h1>Angular 10 FormData (multipart/data-form) Example</h1>
 <div>
-  <form [formGroup] = "uploadForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
     <div>
-      <input type="file" name="profile" (change)="onFileSelect($event)" />
+      <input type="file" name="files" (change)="onFileSelect($event)" />
     </div>
     <div>
       <button type="submit">Upload</button>
