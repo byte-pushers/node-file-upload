@@ -29,7 +29,7 @@ export class AppComponent implements OnInit{
   public onSubmit() {
     const SERVER_URL = "http://localhost:3000/upload";
     const formData = new FormData();
-    formData.append('file', this.uploadForm?.get('files')?.value);
+    formData.append('files', this.uploadForm?.get('files')?.value);
     formData.append('whatever', 'nothing');
 
     this.httpClient.post<any>(SERVER_URL, formData).subscribe(
